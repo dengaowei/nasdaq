@@ -12,6 +12,7 @@ export default [
     path: "/Home",
     component: Home,
   },
+  { path: "/", name: "Home", component: Classify },
   {
     path: "/Classify",
     component: Classify,

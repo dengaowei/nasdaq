@@ -1,20 +1,38 @@
 // 引入api接口
-import { cateLists } from "@/api";
+import { cateLists, reqindex, reqcateNavDatas } from "@/api";
 const state = {
-  cateLists: [], // 所有三级分类信息数据数组
+  cateLists: [],
+  reqindex: [],
+  reqcateNavDatas: [],
 };
 const mutations = {
-  // 直接修改大轮播图的数据
   cateLists(state, cateLists) {
     state.cateLists = cateLists;
   },
+  reqindex(state, reqindex) {
+    state.reqindex = reqindex;
+  },
+  reqcateNavDatas(state, reqcateNavDatas) {
+    state.reqcateNavDatas = reqcateNavDatas;
+  },
 };
 const actions = {
-  // 发送请求获取大轮播图的数据
   async cateLists({ commit }) {
     const result = await cateLists();
     if (result.code === 200) {
       commit("cateLists", result.data);
+    }
+  },
+  async reqindex({ commit }) {
+    const result = await reqindex();
+    if (result.code === 200) {
+      commit("reqindex", result.data);
+    }
+  },
+  async reqcateNavDatas({ commit }) {
+    const result = await reqcateNavDatas();
+    if (result.code === 200) {
+      commit("reqcateNavDatas", result.data);
     }
   },
 };
