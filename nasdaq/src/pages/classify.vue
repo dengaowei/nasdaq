@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="box">
+      <Classdata :index="activeKey" @change="onChange"></Classdata>
+    </div>
     <van-sidebar v-model="activeKey" @change="onChange">
       <van-sidebar-item
         v-for="(image, index) in reqcateNavDatas.categoryL1List"
@@ -11,13 +14,17 @@
 </template>
 
 <script>
-import { Notify } from 'vant';
+import Classdata from "../pages/classdata.vue";
 import { mapState } from 'vuex'
 export default {
   name: 'Classify',
+  components: {
+    Classdata
+  },
   data () {
     return {
       activeKey: 0,
+      index: 0
     };
   },
   computed: {
@@ -26,16 +33,21 @@ export default {
     })
   },
   methods: {
-    onChange (index, a) {
-      Notify({ type: 'primary', message: a });
+    onChange (index) {
+      console.log(index)
     },
   },
   mounted () {
-    console.log(this.categoryL1List)
+    console.log(this.$store)
+    this.$store.dispatch("cateLists");
     this.$store.dispatch("reqcateNavDatas");
+
   }
 }
 </script>
 
-<style scoped lang=scss>
+<style>
+.box {
+  width: 290px;
+}
 </style>

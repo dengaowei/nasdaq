@@ -1,5 +1,6 @@
 // 引入组件
 import Home from "../pages/Home.vue";
+import Classdata from "../pages/classdata.vue";
 import Classify from "../pages/classify.vue";
 import Personage from "../pages/personage.vue";
 import Shoppingtrolley from "../pages/shoppingtrolley.vue";
@@ -16,6 +17,12 @@ export default [
   {
     path: "/Classify",
     component: Classify,
+    children: [
+      {
+        path: "/Classify/Classdata",
+        component: Classdata,
+      },
+    ],
   },
   {
     path: "/Personage",

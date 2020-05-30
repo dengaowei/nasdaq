@@ -20,6 +20,7 @@ const actions = {
   async cateLists({ commit }) {
     const result = await cateLists();
     if (result.code === 200) {
+      JSON.stringify(result.data);
       commit("cateLists", result.data);
     }
   },
