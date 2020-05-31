@@ -4,7 +4,6 @@ import axios from "axios";
 // 引入nprogress插件包及样式
 import Nprogress from "nprogress";
 import "nprogress/nprogress.css";
-import store from "@/store";
 // 1. 配置一个通用的基础路径和请求超时时间
 const ajax = axios.create({
   // 注意大小写

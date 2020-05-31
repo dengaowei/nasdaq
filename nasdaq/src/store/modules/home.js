@@ -1,9 +1,10 @@
 // 引入api接口
-import { cateLists, reqindex, reqcateNavDatas } from "@/api";
+import { cateLists, reqindex, reqcateNavDatas, reqworthbuying } from "@/api";
 const state = {
   cateLists: [],
   reqindex: [],
   reqcateNavDatas: [],
+  reqworthbuying: {},
 };
 const mutations = {
   cateLists(state, cateLists) {
@@ -14,6 +15,9 @@ const mutations = {
   },
   reqcateNavDatas(state, reqcateNavDatas) {
     state.reqcateNavDatas = reqcateNavDatas;
+  },
+  reqworthbuying(state, reqworthbuying) {
+    state.reqworthbuying = reqworthbuying;
   },
 };
 const actions = {
@@ -36,8 +40,20 @@ const actions = {
       commit("reqcateNavDatas", result.data);
     }
   },
+  async reqworthbuying({ commit }) {
+    const result = await reqworthbuying();
+    console.log(result);
+    if (result.code == 200) {
+      commit("reqworthbuying", result.data);
+    }
+  },
 };
-const getters = {};
+const getters = {
+  worthbuying(state) {
+    const worthbuying = state.reqworthbuying.navList;
+    return worthbuying;
+  },
+};
 export default {
   state,
   mutations,
