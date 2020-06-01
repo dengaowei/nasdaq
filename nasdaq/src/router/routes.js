@@ -13,7 +13,7 @@ export default [
     path: "/Home",
     component: Home,
   },
-  { path: "/", name: "Home", component: Classify },
+  { path: "/", name: "Home", component: Home },
   {
     path: "/Classify",
     component: Classify,

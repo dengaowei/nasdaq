@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <van-grid :border="false" :column-num="5">
-      <van-grid-item>
-        <van-image v-for="(img,index) in worthbuying " :key="index" :src="img.picUrl" />
-      </van-grid-item>
-    </van-grid>
+  <div class="con">
+    <van-tabs v-model="active" animated>
+      <van-tab v-for="index in 4" :key="index">
+        <van-image v-for="(img,index) in worthbuying " :key="index" :src="img.picUrl" class="box1" />
+        <!-- {{img.mainTitle}}{{img.viceTitle}} -->
+      </van-tab>
+    </van-tabs>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ export default {
   name: 'Worthbuying',
   data () {
     return {
+      active: 0
     };
   },
   computed: {
@@ -28,5 +30,14 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
+<style >
+.con {
+  background: url("https://m.you.163.com/topic/index/img/topic_title_bg.2373a140.png");
+  width: 100%;
+  height: 300px;
+}
+.box1 {
+  width: 62.24px;
+  height: 62.24px;
+}
 </style>

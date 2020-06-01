@@ -19,7 +19,9 @@ import { Lazyload } from "vant";
 import { Grid, GridItem } from "vant";
 import { Image as VanImage } from "vant";
 import { Sidebar, SidebarItem } from "vant";
+import { Icon } from "vant";
 
+Vue.use(Icon);
 Vue.use(Sidebar);
 Vue.use(SidebarItem);
 Vue.use(VanImage);

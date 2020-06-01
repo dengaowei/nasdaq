@@ -2,7 +2,7 @@
 import { cateLists, reqindex, reqcateNavDatas, reqworthbuying } from "@/api";
 const state = {
   cateLists: [],
-  reqindex: [],
+  reqindex: { categoryHotSellModule: {} },
   reqcateNavDatas: [],
   reqworthbuying: {},
 };
@@ -52,6 +52,10 @@ const getters = {
   worthbuying(state) {
     const worthbuying = state.reqworthbuying.navList;
     return worthbuying;
+  },
+  categoryList(state) {
+    const categoryList = state.reqindex.categoryHotSellModule.categoryList;
+    return categoryList ? categoryList : {};
   },
 };
 export default {
