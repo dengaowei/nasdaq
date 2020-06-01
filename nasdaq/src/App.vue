@@ -25,13 +25,13 @@
       </div>
     </div>
     <router-view />
-    <!-- <van-tabbar v-model="active">
+    <van-tabbar v-model="active">
       <van-tabbar-item replace to="Home" icon="wap-home-o">首页</van-tabbar-item>
       <van-tabbar-item replace to="Classify" icon="send-gift-o">分类</van-tabbar-item>
       <van-tabbar-item replace to="Worthbuying" icon="idcard">值得买</van-tabbar-item>
       <van-tabbar-item replace to="Shoppingtrolley" icon="cart-o">购物车</van-tabbar-item>
       <van-tabbar-item replace to="Personage" icon="friends-o">个人</van-tabbar-item>
-    </van-tabbar>-->
+    </van-tabbar>
   </div>
 </template>
 <script>
