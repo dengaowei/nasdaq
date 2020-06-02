@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     onChange (index) {
-      console.log(index)
+      this.index = index
     },
   },
   mounted () {

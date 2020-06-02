@@ -2,7 +2,10 @@
   <div>
     <template>
       <van-grid :border="false" :column-num="3">
-        <van-grid-item>{{cateLists[index]}}</van-grid-item>
+        <van-grid-item v-for="(image, index) in cateLists[index].categoryList" :key="index">
+          <van-image :src="image.bannerUrl" :key="index" />
+          {{image.frontName}}
+        </van-grid-item>
       </van-grid>
     </template>
   </div>
@@ -22,12 +25,6 @@ export default {
       }
     },
   },
-  watch: {
-    index: val => {
-      console.log(val);
-    }
-  },
-
   computed: {
     ...mapState({
       cateLists: state => state.home.cateLists
