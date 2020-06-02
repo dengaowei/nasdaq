@@ -20,14 +20,15 @@ import { Grid, GridItem } from "vant";
 import { Image as VanImage } from "vant";
 import { Sidebar, SidebarItem } from "vant";
 import { Icon } from "vant";
-
+import "swiper/css/swiper.css";
+// import style
 Vue.use(Icon);
 Vue.use(Sidebar);
 Vue.use(SidebarItem);
 Vue.use(VanImage);
 Vue.use(Grid);
 Vue.use(GridItem);
-Vue.use(VueAwesomeSwiper /* { default options with global component } */);
+Vue.use(VueAwesomeSwiper);
 Vue.use(Lazyload);
 Vue.use(Swipe);
 Vue.use(SwipeItem);

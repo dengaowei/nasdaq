@@ -4,7 +4,9 @@ const state = {
   cateLists: [],
   reqindex: { categoryHotSellModule: {} },
   reqcateNavDatas: [],
-  reqworthbuying: {},
+  reqworthbuying: {
+    navList: [],
+  },
 };
 const mutations = {
   cateLists(state, cateLists) {

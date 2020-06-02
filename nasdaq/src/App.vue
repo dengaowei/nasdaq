@@ -77,7 +77,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 .imgWrap {
   display: flex;
 }
@@ -94,4 +94,6 @@ export default {
   align-items: center;
   width: 100%;
 }
+</style>
+<style lang="scss" scoped>
 </style>
