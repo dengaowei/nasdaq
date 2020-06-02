@@ -2,9 +2,7 @@
   <div>
     <template>
       <van-grid :border="false" :column-num="3">
-        <van-grid-item>
-          <van-image />
-        </van-grid-item>
+        <van-grid-item>{{cateLists[index]}}</van-grid-item>
       </van-grid>
     </template>
   </div>
@@ -16,15 +14,30 @@ export default {
   props: ['index'],
   methods: {
     click () {
-      console.log(this.index)
+
+    },
+    data () {
+      return {
+
+      }
+    },
+  },
+  watch: {
+    index: val => {
+      console.log(val);
     }
   },
+
   computed: {
     ...mapState({
       cateLists: state => state.home.cateLists
     })
   },
   mounted () {
+
+  },
+  created () {
+
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box">
-      <Classdata :index="activeKey" @change="onChange"></Classdata>
+      <Classdata :index="index" @change="onChange"></Classdata>
     </div>
     <van-sidebar v-model="activeKey" @change="onChange">
       <van-sidebar-item
@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     ...mapState({
-      reqcateNavDatas: state => state.home.reqcateNavDatas
+      reqcateNavDatas: state => state.home.reqcateNavDatas,
     })
   },
   methods: {

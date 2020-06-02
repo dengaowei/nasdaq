@@ -22,8 +22,17 @@
         <img src="https://yanxuan.nosdn.127.net/b601a0fdb7e0ae4ee2affd12182b6971.png" alt />
       </div>
     </div>
-    <div>
+    <div class="Newlyweds">
       <div class="text">——新人专享礼——</div>
+      <div>
+        <div>
+          <!-- <img src="//yanxuan.nosdn.127.net/352b0ea9b2d058094956efde167ef852.png" alt /> -->
+        </div>
+        <div>
+          <!-- <img src="https://yanxuan-item.nosdn.127.net/4193be1039593e97798de896c304fb9d.png" alt />
+          <img src="https://yanxuan-item.nosdn.127.net/1eecf74b769af3ed4c7817aeb5d6bb2b.png" alt />-->
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -61,6 +70,7 @@ export default {
 .recommend2 {
   width: 100%;
   display: flex;
+  background: crimson;
 }
 .recommend2 > img {
   width: 50%;
@@ -68,5 +78,7 @@ export default {
 .text {
   display: flex;
   justify-content: center;
+}
+.Newlyweds {
 }
 </style>
