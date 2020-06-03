@@ -1,7 +1,7 @@
 // 引入api接口
 import { cateLists, reqindex, reqcateNavDatas, reqworthbuying } from "@/api";
 const state = {
-  cateLists: [],
+  cateLists: {},
   reqindex: { categoryHotSellModule: {} },
   reqcateNavDatas: [],
   reqworthbuying: {
