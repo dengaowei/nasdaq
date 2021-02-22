@@ -1,4 +1,5 @@
 <template>
+<div>
   <swiper class="swiper" :options="swiperOption">
     <swiper-slide v-for="(c1, index) in worthbuying" :key="index">
       <div>
@@ -6,8 +7,17 @@
         <img :src="c1.picUrl" alt />
       </div>
     </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
+    <div class="swiper-pagination" slot="pagination">
+     
+    </div>
+    
   </swiper>
+  <div @click="add">
+   {{fullName}}
+  </div>
+
+</div>
+  
 </template>
 
 <script>
@@ -28,25 +38,10 @@ export default {
           el: '.swiper-pagination',
           clickable: true
         },
-        // breakpoints: {
-        //   1024: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 40
-        //   },
-        //   768: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30
-        //   },
-        //   640: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20
-        //   },
-        //   320: {
-        //     slidesPerView: 1,
-        //     spaceBetween: 10
-        //   }
-        // }
-      }
+     
+      },
+       firstName:"add",
+      lastName:"app"
     }
   },
   computed: {
@@ -54,12 +49,26 @@ export default {
       'worthbuying',
     ]),
     swiper () {
+        console.log(1);
       return this.$refs.mySwiper.$swiper
+    
+    },
+    fullName: function () {
+      return this.firstName + ' ' + this.lastName
     }
+  },
+  methods:{
+add(){
+  setInterval(()=>{
+  this.firstName= Date.now()
+  },1000)
+
+}
   },
   mounted () {
     this.$store.dispatch("reqworthbuying");
     console.log(this.$store);
+
   },
 
 }       
