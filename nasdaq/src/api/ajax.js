@@ -13,6 +13,7 @@ const ajax = axios.create({
 // 请求拦截器
 ajax.interceptors.request.use((config) => {
   // 2.请求的时候显示进度条
+  console.log(config);
   Nprogress.start(); // 此时是显示进度条(响应成功了或者失败的时候需要隐藏进度条)
   // 5.所有的请求头都需要携带userTempId
   //config.headers["userTempId"] = store.state.user.userTempId; // 用户临时id凭证 --->vuex--->store.state.user.userTempId
