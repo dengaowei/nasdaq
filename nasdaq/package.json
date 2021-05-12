@@ -17,7 +17,7 @@
     "mockjs": "^1.1.0",
     "node-sass": "^4.14.1",
     "nprogress": "^0.2.0",
-    "postcss": "^7.0.31",
+    "postcss": "^8.2.10",
     "postcss-px2rem": "^0.3.0",
     "qrcode": "^1.4.4",
     "swiper": "^5.4.1",
